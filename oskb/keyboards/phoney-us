@@ -3,7 +3,7 @@
     "formatversion": 1,
     "description": "US - QWERTY",
     "keymap": "us",
-    "style": ".grey {\n    background-color: #aaaaaa;\n}\n\n.key.row4, .key.view_arrows {\n    font-size: 65%;\n}\n\n.key.row1.view_arrows {\n    font-size: 60%;\n}\n\n.lpsymbol {\n    font-size: 50%;\n    color: blue;\n    qproperty-alignment: 'AlignTop | AlignRight';\n}",
+    "style": ".grey {\n    background-color: #3f3f40;\n}\n\n.key.row4, .key.view_arrows {\n    font-size: 65%;\n}\n\n.key.row1.view_arrows {\n    font-size: 60%;\n}\n\n.lpsymbol {\n    font-size: 50%;\n    color: white;\n    qproperty-alignment: 'AlignTop | AlignRight';\n}",
     "views": {
         "default": {
             "columns": [
