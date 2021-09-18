@@ -19,7 +19,7 @@ QLabel {
     border-radius: _OSKB_RADIUS_px;
 }
 .key:pressed {
-    background-color: #3f3f40;
+    background-color: #9d9da7;
     border: 1px solid black;
     font-size: _OSKB_FONTSIZE_px;
     color: white;
@@ -37,7 +37,7 @@ QLabel {
 .key:not(modifier):pressed,
 .key.pseudomodifier,
 .key.held {
-    background-color: #999999;
+    background-color: #9d9da7;
 }
 
 .view .key.pseudomodifier,
