@@ -40,7 +40,6 @@
                 },
                 {
                   "caption": "?",
-                  "width": 1.4,
                   "single": {
                     "send": {
                       "name": "?",
@@ -68,7 +67,6 @@
                 },
                 {
                   "caption": "!",
-                  "width": 1.4,
                   "single": {
                     "send": {
                       "name": "!",
@@ -97,7 +95,6 @@
                   }
                 },
                 {
-                  "width": 1.2,
                   "caption": "F10",
                   "single": {
                     "send": {
@@ -107,7 +104,7 @@
                     }
                   }
                 }
-              ]
+              ]              
             },
             {
               "keys": [
@@ -708,7 +705,7 @@
         }
       ],
       "widthInUnits": 10,
-      "heightInUnits": 4
+      "heightInUnits": 2
     },
     "shifted": {
       "columns": [
