@@ -539,6 +539,19 @@ class Keyboard(QWidget):
 
             if cmd == "view" and direction == RELEASED:
                 viewname = argdict.get("name", "default")
+                if viewname == "default":
+                    screenwidth = self.screen.width()
+                    screenheight = self.screen.height()
+                    x = int(0 + (screenwidth / 2) - (720 / 2))
+                    y = 0 + screenheight - 450
+                    self.setGeometry(x, y, 720, 450)
+                elif viewname == "fullextended":
+                    screenwidth = self.screen.width()
+                    screenheight = self.screen.height()
+                    x = int(0 + (screenwidth / 2) - (720 / 2))
+                    y = 0 + screenheight - 700
+                    self.setGeometry(x, y, 720, 700)
+
                 self._viewuntil = argdict.get("until")
                 self._thenview = argdict.get("thenview")
                 self.setView(viewname)
@@ -609,14 +622,13 @@ class Keyboard(QWidget):
                 self._sendKey(int(keycode), RELEASED)
 
     def _sendKey(self, keycode, keyevent):
-        if keycode==14:
-            print("ssssssssssssssssssssssssssssssssssssssssssssssssssss")
-            screenwidth = self.screen.width()
-            screenheight = self.screen.height()
-            x = int(0 + (screenwidth / 2) - (720 / 2))
-            y = 0 + screenheight - 450
-            self.setGeometry(x, y, 720, 450)
-
+        # if keycode==14:
+            # print("ssssssssssssssssssssssssssssssssssssssssssssssssssss")
+            # screenwidth = self.screen.width()
+            # screenheight = self.screen.height()
+            # x = int(0 + (screenwidth / 2) - (720 / 2))
+            # y = 0 + screenheight - 450
+            # self.setGeometry(x, y, 720, 450)
         if self._sendkeys:
             self._sendkeys(keycode, keyevent)
 
