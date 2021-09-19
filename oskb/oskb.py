@@ -80,6 +80,9 @@ class Keyboard(QWidget):
         self._kbdstack = QStackedLayout(self)
 
         self._stylesheet = pkg_resources.resource_string("oskb", "default.css").decode("utf-8")
+    
+    def setScreen(self, x):
+        self.screen = x
 
     #
     # Reimplemented Qt methods
@@ -606,6 +609,14 @@ class Keyboard(QWidget):
                 self._sendKey(int(keycode), RELEASED)
 
     def _sendKey(self, keycode, keyevent):
+        if keycode==14:
+            print("ssssssssssssssssssssssssssssssssssssssssssssssssssss")
+            screenwidth = self.screen.width()
+            screenheight = self.screen.height()
+            x = int(0 + (screenwidth / 2) - (720 / 2))
+            y = 0 + screenheight - 450
+            self.setGeometry(x, y, 720, 450)
+
         if self._sendkeys:
             self._sendkeys(keycode, keyevent)
 

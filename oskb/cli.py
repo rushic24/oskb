@@ -111,7 +111,8 @@ specified.""",
 
 
 def main():
-    global x, y, w, h
+    global x, y, w, h, screen
+    screen=None
 
     #
     # Parse command line arguments
@@ -186,8 +187,11 @@ def main():
     #
     # Get our keyboard widget instance
     #
+    desktop = app.desktop()
+    screen = desktop.screenGeometry()
 
     keyboard = oskb.Keyboard()
+    keyboard.setScreen(screen)
     if cmdline.float:
         keyboard.setWindowTitle("On-Screen Keyboard")
         keyboard.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus)
