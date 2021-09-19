@@ -400,7 +400,7 @@ class Keyboard(QWidget):
         kh = self.height() / self._view["_heightInUnits"]
         fontsize = min(max(int(min(kw / 1.5, kh / 1.5)), 5), 50)
         margin = int(fontsize / 15)
-        radius = margin * 2
+        radius = margin * 5
         # Dynamically change the default and keyboard stylesheets
         all_sheets = self._stylesheet + "\n\n" + self._kbd.get("style", "")
         super().setStyleSheet(fixStyle(all_sheets, fontsize, margin, radius))
